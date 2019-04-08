@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  background: lightblue;
+}
+
+.nav {
+  font-size: 130%;
+  background-color: lightpink;
+  list-style-type: none;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  /*border-bottom: 3px solid white;*/
+}
+
+.nav li {
+  display: inline;
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.nav li:not(.org-name):not(.active):hover {
+  border: 2px solid #fff;
+  border-bottom: 2px solid lightblue;
+  padding: 12px 14px;
+}
+
+.nav li:not(.org-name):hover, .nav li.active {
+  background-color: lightblue;
+}
+
+.nav li a {
+  color: white;
+  text-decoration: none;
+}
+
+#main-carousel .carousel-image {
+  background-position: initial;
+  position: relative;
+  height: 650px;
+  background-image: url("../media/carousel_1.jpg");
+}
+
+#main-carousel {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  max-width: 650px;
+  width: 100%;
+  align-content: center;
+  margin: 0 auto;
+}
+
+.thumbs {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.thumbs img {
+  width: 100px;
+  height: 100px;
+}
+
+.thumbs .thumb-active {
+  border: 5px solid lightpink;
+}
+
+.arrow {
+  position: relative;
+  width: 0;
+  height: 0;
+  /* I'm not sure why, but `top` goes from the top of `#main-carousel` and *not* the not of `.carousel-image` */
+  top: 41.935483871%;
+  z-index: 999;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  opacity: 0.5;
+}
+
+.arrow:hover {
+  opacity: 1;
+}
+
+.arrow-left {
+  float: left;
+  border-right: 50px solid #fff;
+}
+
+.arrow-right {
+  float: right;
+  border-left: 50px solid #fff;
+}
+
+.fancy {
+  font-family: cursive;
+}
+
+.centered {
+  text-align: center;
+}
+
+.allcaps {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.capitalise {
+  text-transform: capitalize;
+}
+
+.monospace {
+  font-family: monospace;
+}
+#mainpage-heading {
+  margin-bottom: 0;
+  color: #fff;
+}
+
+.org-name {
+  float: right !important;
+  /*right: 0;*/
+}
